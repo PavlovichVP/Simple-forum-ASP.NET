@@ -1,0 +1,26 @@
+﻿@model List<Post>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="p-3 bg-light rounded shadow-sm">
+    <h6 class="border-bottom pb-2 mb-0">Последнее обновление</h6>
+
+    @foreach (Post posts in Model)
+    {
+
+        <div class="d-flex text-muted pt-3 border-bottom">
+            <p class="pb-3 mb-0 small lh-sm ">
+                <a class="fs-5 fw-bold d-block text-gray-dark" href="/post?id=@posts.Id">@posts.Title</a>
+                Создано: @posts.Created.ToShortDateString();
+            </p>
+        </div>
+    }
+
+    <small class="d-block text-end mt-3">
+        <a href="#">Все записи</a>
+    </small>
+
+
+</div>

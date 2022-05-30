@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "_Sections";
+}
+
+@section Sidebar {
+    <div class="flex-shrink-0 p-3 bg-light rounded shadow-sm" style="width: 230px;">
+                    <button type="button" class="btn btn-dark col-12 ">Создать тему</button>
+                    <hr />
+
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-1">
+
+
+                            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#main-collapse" aria-expanded="true">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true">Основной раздел</span>
+                            </button>
+                            <div class="collapse" id="main-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded">Overview</a></li>
+                                    <li><a href="#" class="link-dark rounded">Updates</a></li>
+                                    <li><a href="#" class="link-dark rounded">Reports</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+}
